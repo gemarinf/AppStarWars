@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
+import { PeliculaComponent } from './pelicula/pelicula.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuPrincipalComponent
+    PeliculaComponent
   ],
   imports: [
     BrowserModule
