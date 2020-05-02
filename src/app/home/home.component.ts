@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { FilmService } from './services/film.service';
-import { Films } from './models/film';
-import { Search } from './models/search';
-import { ThrowStmt } from '@angular/compiler';
-
-
+import { FilmService } from '../services/film.service';
+import { Films } from '../models/film'
+import { Search } from '../models/search';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AppComponent implements OnInit {
+
+
+  export class HomeComponent implements OnInit {
   title = 'appStarWars';
   films : Films
   search: Search
@@ -134,4 +133,3 @@ export class AppComponent implements OnInit {
 }
 
 }
-

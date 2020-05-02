@@ -1,56 +1,10 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <div *ngIf="newhope">
-            <img src="./assets/images/a-new-hope.jpg" class="col-sm-12 pl-sm-0 pr-sm-0">
-            <div class="col-sm-12 text-center">{{films.results[0].title}}</div>
-            </div>
-        </div>
-        <div style="padding-top: 20px;" class="col">
-            <input (keyup)="searchByYear(value.value);" class="form-control" id="value" name="value" type="text" placeholder="Buscar pelicula nombre o por año" #value/>
-        </div>
-        <div class="col">
-            <div *ngIf="jedi">
-            <img src="./assets/images/return-of-the-jedi.jpg" class="col-sm-12 pl-sm-0 pr-sm-0">
-            <div class="col-sm-12 text-center">{{films.results[2].title}}</div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div *ngIf="attack">
-            <img src="./assets/images/attack-of-the-clones.jpg" class="col-sm-12 pl-sm-0 pr-sm-0">
-            <div class="col-sm-12 text-center">{{films.results[4].title}}</div>
-            </div>
-        </div>
-        <div class="col">
 
-        </div>
-        <div class="col">
-            <div *ngIf="empire">
-            <img src="./assets/images/the-empires-strikes-back.jpg" class="col-sm-12 pl-sm-0 pr-sm-0">
-            <div class="col-sm-12 text-center">{{films.results[1].title}}</div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div *ngIf="phantom">
-            <img src="./assets/images/the-phantonm-amenace.jpg" class="col-sm-12 pl-sm-0 pr-sm-0">
-            <div class="col-sm-12 text-center">{{films.results[3].title}}</div>
-            </div>
-        </div>
-        <div class="col">
-            <div *ngIf="revenge">
-            <img src="./assets/images/revance-of-the-sith.jpg" class="col-sm-12 pl-sm-0 pr-sm-0">
-            <div class="col-sm-12 text-center">{{films.results[5].title}}</div>
-            </div>
-        </div>
-        <div class="col" >
-            <div *ngIf="force">
-            <img src="./assets/images/the-force-awakens.jpg" class="col-sm-12 pl-sm-0 pr-sm-0">
-            <div class="col-sm-12 text-center">{{films.results[6].title}}</div>
-            </div>
-        </div>
-    </div>
-</div>
+
+
+
+<!--aca se ve la sección-->
+<router-outlet></router-outlet>
+
+
+
+

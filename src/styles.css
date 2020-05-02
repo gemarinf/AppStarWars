@@ -31,7 +31,19 @@ body {
     font-family: Starjedi;
     color:#f4d838;
     font-size: 18px;
+
     
 
     }
+    .dos{
+    
+      background-image: url(./assets/images/backDos.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      
+    }
+    
+    
 

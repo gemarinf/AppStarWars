@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { FilmService } from './services/film.service';
-import { Films } from './models/film';
-import { Search } from './models/search';
-import { ThrowStmt } from '@angular/compiler';
-
-
+import { FilmService } from '../services/film.service';
+import { Films } from '../models/film'
+import { Search } from '../models/search';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-films-dos',
+  templateUrl: './films-dos.component.html',
+  styleUrls: ['./films-dos.component.css']
 })
-export class AppComponent implements OnInit {
+export class FilmsDosComponent implements OnInit {
+
   title = 'appStarWars';
   films : Films
   search: Search
@@ -132,6 +130,4 @@ export class AppComponent implements OnInit {
     console.log(inputChar);
     this.searchByYear(inputChar);
 }
-
 }
-
