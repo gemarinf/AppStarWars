@@ -9,7 +9,7 @@
       </div>
       <div class="col-6 ml-60 mt-5">
 
-        <h4>Película: {{films.results[1].title}}</h4>
+        <h4>Película: {{film.title}}</h4>
       </div>
 
     </div>
@@ -36,7 +36,7 @@
 
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
               <div class="card-body">
-                {{films.results[1].opening_crawl}}
+                {{film.opening_crawl}}
               </div>
             </div>
           </div>
@@ -45,13 +45,13 @@
               <h5 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
                   aria-expanded="false" aria-controls="collapseTwo">
-                  ver director
+                  Director
                 </button>
               </h5>
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
               <div class="card-body">
-                {{films.results[1].director}}
+                {{film.director}}
               </div>
             </div>
           </div>
@@ -60,13 +60,13 @@
               <h5 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
                   aria-expanded="false" aria-controls="collapseThree">
-                  ver fecha de lanzamiento
+                  Fecha de lanzamiento
                 </button>
               </h5>
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
               <div class="card-body">
-                <h4 class="">{{films.results[1].release_date}}</h4>
+                <h4 class="">{{film.release_date}}</h4>
               </div>
             </div>
           </div>

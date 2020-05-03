@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FilmService } from '../services/film.service';
-import { Films } from '../models/film'
+import { VehicleService } from '../services/vehicle.service';
+import { Films, Film } from '../models/film'
+import { Vehicle } from '../models/vehicle'
 import { Search } from '../models/search';
 
 @Component({
@@ -11,124 +13,59 @@ import { Search } from '../models/search';
 export class FilmsUnoComponent implements OnInit {
 
   title = 'appStarWars';
-  films : Films
-  search: Search
+  films: Films;
+  film: Film;
+  vehicle: Vehicle;
+  search: Search;
   newhope: Boolean = true;
-    attack: Boolean = true;
-    phantom: Boolean = true;
-    revenge: Boolean = true;
-    jedi: Boolean = true;
-    empire: Boolean = true;
-    force: Boolean = true;
+  attack: Boolean = true;
+  phantom: Boolean = true;
+  revenge: Boolean = true;
+  jedi: Boolean = true;
+  empire: Boolean = true;
+  force: Boolean = true;
+  vehicles: Vehicle[] = [];
+  
 
-  constructor(private filmService: FilmService){
+  constructor(private filmService: FilmService, private vehicleService: VehicleService) {
 
   }
 
-  ngOnInit(){
-    this.getFilms();
+  ngOnInit() {
+    this.getFilm();
   }
 
   getFilms() {
-    this.filmService.getFilms().subscribe((filmsFromAPI:Films)=>{
+    this.filmService.getFilms().subscribe((filmsFromAPI: Films) => {
       this.films = filmsFromAPI;
-      console.log(this.films);
-    }, (err: any)=>{
+    }, (err: any) => {
       console.error(err);
     });
   }
 
-  searchByYear(year:string)
-  {
-   console.log(year);
-
-     if(year.includes("1977") || year.includes("a new hope"))
-    {
-      this.newhope = true;
-      this.attack = false;
-      this.phantom = false;
-      this.revenge = false;
-      this.jedi = false;
-      this.empire = false;
-      this.force = false;
-    }
-    else if(year.includes("2002") || year.includes("attack of the clones"))
-    {
-      this.newhope = false;
-      this.attack = true;
-      this.phantom = false;
-      this.revenge = false;
-      this.jedi = false;
-      this.empire = false;
-      this.force = false;
-    }
-    else if(year.includes("1999") || year.includes("the phantom menace"))
-    {
-      this.newhope = false;
-      this.attack = false;
-      this.phantom = true;
-      this.revenge = false;
-      this.jedi = false;
-      this.empire = false;
-      this.force = false;
-    }
-    else if(year.includes("2005") || year.includes("revenge of the sith"))
-    {
-      this.newhope = false;
-      this.attack = false;
-      this.phantom = false;
-      this.revenge = true ;
-      this.jedi = false;
-      this.empire = false;
-      this.force = false;
-    }
-    else if(year.includes("1983") || year.includes("return of the jedi"))
-    {
-      this.newhope = false;
-      this.attack = false;
-      this.phantom = false;
-      this.revenge = false ;
-      this.jedi = true;
-      this.empire = false;
-      this.force = false;
-    }
-    else if(year.includes("1980") || year.includes("the empire strikes back"))
-    {
-      this.newhope = false;
-      this.attack = false;
-      this.phantom = false;
-      this.revenge = false ;
-      this.jedi = false;
-      this.empire = true;
-      this.force = false;
-    }
-    else if(year.includes("2015") || year.includes("the force awakens"))
-    {
-      this.newhope = false;
-      this.attack = false;
-      this.phantom = false;
-      this.revenge = false ;
-      this.jedi = false;
-      this.empire = false;
-      this.force = true;
-    }
-    else
-      {
-        console.log("entra else");
-        this.newhope = true;
-        this.attack = true;
-        this.phantom = true;
-        this.revenge = true ;
-        this.jedi = true;
-        this.empire = true;
-        this.force = true;
-      }
+  getFilm() {
+    this.filmService.getFilm('1').subscribe((filmFromAPI: Film) => {
+      this.film = filmFromAPI;
+      this.getVehicles();
+    }, (err: any) => {
+      console.error(err);
+    });
   }
 
-  keyPress(event: any) {
-    const inputChar = String.fromCharCode((event as KeyboardEvent).charCode);
-    console.log(inputChar);
-    this.searchByYear(inputChar);
-}
+  getVehicles() {
+    var self = this;
+    this.film.vehicles.forEach(function (vehicle) {
+      self.getVehicle(vehicle);
+    });
+  }
+
+  getVehicle(url: string) {
+    this.vehicleService.getVehicle(url).subscribe((vehicleFromAPI: Vehicle) => {
+      this.vehicles.push(vehicleFromAPI);
+    }, (err: any) => {
+      console.error(err);
+    });
+  }
+
 
 }
