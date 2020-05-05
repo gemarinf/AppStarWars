@@ -22,7 +22,6 @@ import { SpecieService } from '../services/specie.service';
 export class FilmsUnoComponent implements OnInit {
   [x: string]: any;
 
-  title = 'appStarWars';
   films: Films;
   film: Film;
   vehicle: Vehicle;
