@@ -97,30 +97,23 @@
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Model</th>
+                      <th scope="col">Passengers</th>
+                      <th scope="col">Builder</th>
+                      <th scope="col">Top Speed</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+                    <tr *ngFor = "let vehicle of vehicles ; let indexV = index">
+                      <th scope="row">{{indexV + 1}}</th>
+                      <td>{{vehicle.name}}</td>
+                      <td>{{vehicle.model}}</td>
+                      <td>{{vehicle.passengers}}</td>
+                      <td>{{vehicle.manufacturer}}</td>
+                      <td>{{vehicle.max_atmosphering_speed}}</td>
                     </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
+                   
                   </tbody>
                 </table>
               </div>
@@ -131,6 +124,205 @@
       </div>
 
     </div>
+
+    <div class="row pt-5">
+
+      <div class="col-sm mr-10">
+
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  See Character
+                </button>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <table class="table table-dark">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Height</th>
+                      <th scope="col">Birth Year</th>
+                      <th scope="col">Gender</th>
+                      <th scope="col">Hair Color</th>
+                      <th scope="col">Eye Color</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor = "let Character of characters ; let indexV = index">
+                      <th scope="row">{{indexV + 1}}</th>
+                      <td>{{Character.name}}</td>
+                      <td>{{Character.height}}</td>
+                      <td>{{Character.birth_year}}</td>
+                      <td>{{Character.gender}}</td>
+                      <td>{{Character.hair_color}}</td>
+                      <td>{{Character.eye_color}}</td>
+                    </tr>
+                   
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row pt-5">
+
+      <div class="col-sm mr-10">
+
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  See Planets
+                </button>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <table class="table table-dark">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Climate</th>
+                      <th scope="col">Gravity</th>
+                      <th scope="col">Terrain</th>
+                      <th scope="col">Population</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor = "let planet of planets ; let indexV = index">
+                      <th scope="row">{{indexV + 1}}</th>
+                      <td>{{planet.name}}</td>
+                      <td>{{planet.climate}}</td>
+                      <td>{{planet.gravity}}</td>
+                      <td>{{planet.terrain}}</td>
+                      <td>{{planet.population}}</td>
+                    </tr>
+                   
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row pt-5">
+
+      <div class="col-sm mr-10">
+
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  See Starchips
+                </button>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <table class="table table-dark">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Model</th>
+                      <th scope="col">Manufacturer</th>
+                      <th scope="col">Passengers</th>
+                      <th scope="col">Top Speed</th>
+                      <th scope="col">Hyperdrive Rating</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor = "let starship of starships ; let indexV = index">
+                      <th scope="row">{{indexV + 1}}</th>
+                      <td>{{starship.name}}</td>
+                      <td>{{starship.model}}</td>
+                      <td>{{starship.manufacturer}}</td>
+                      <td>{{starship.passengers}}</td>
+                      <td>{{starship.max_atmosphering_speed}}</td>
+                      <td>{{starship.hyperdrive_rating}}</td>
+                    </tr>
+                   
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row pt-5">
+
+      <div class="col-sm mr-10">
+
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  See Species
+                </button>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <table class="table table-dark">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Average Height</th>
+                      <th scope="col">Skin Colors</th>
+                      <th scope="col">Average Lifespan</th>
+                      <th scope="col">Eye Color</th>
+                      <th scope="col">Lenguage</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor = "let specie of species ; let indexV = index">
+                      <th scope="row">{{indexV + 1}}</th>
+                      <td>{{specie.name}}</td>
+                      <td>{{specie.average_height}}</td>
+                      <td>{{specie.skin_colors}}</td>
+                      <td>{{specie.average_lifespan}}</td>
+                      <td>{{specie.eye_colors}}</td>
+                      <td>{{specie.language}}</td>
+                    </tr>
+                   
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
 
   </div>
 
