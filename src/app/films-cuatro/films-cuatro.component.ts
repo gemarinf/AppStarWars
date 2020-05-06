@@ -55,7 +55,7 @@ export class FilmsCuatroComponent implements OnInit {
   }
 
   getFilm() {
-    this.filmService.getFilm('4').subscribe((filmFromAPI: Film) => {
+    this.filmService.getFilm('5').subscribe((filmFromAPI: Film) => {
       this.film = filmFromAPI;
       this.getVehicles();
       this.getCharacters();

@@ -55,7 +55,7 @@ export class FilmsTresComponent implements OnInit {
   }
 
   getFilm() {
-    this.filmService.getFilm('3').subscribe((filmFromAPI: Film) => {
+    this.filmService.getFilm('4').subscribe((filmFromAPI: Film) => {
       this.film = filmFromAPI;
       this.getVehicles();
       this.getCharacters();

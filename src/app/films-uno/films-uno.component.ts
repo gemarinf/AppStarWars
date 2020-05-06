@@ -61,7 +61,7 @@ export class FilmsUnoComponent implements OnInit {
   }
 
   getFilm() {
-    this.filmService.getFilm('1').subscribe((filmFromAPI: Film) => {
+    this.filmService.getFilm('2').subscribe((filmFromAPI: Film) => {
       this.film = filmFromAPI;
       this.getVehicles();
       this.getCharacters();

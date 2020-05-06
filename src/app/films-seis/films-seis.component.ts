@@ -55,7 +55,7 @@ export class FilmsSeisComponent implements OnInit {
   }
 
   getFilm() {
-    this.filmService.getFilm('6').subscribe((filmFromAPI: Film) => {
+    this.filmService.getFilm('7').subscribe((filmFromAPI: Film) => {
       this.film = filmFromAPI;
       this.getVehicles();
       this.getCharacters();
