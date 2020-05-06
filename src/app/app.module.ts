@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { PeliculaComponent } from './pelicula/pelicula.component';
 import { FilmsCeroComponent } from './films-cero/films-cero.component';
 
 import { RoutingModule } from './routing/routing.module';
@@ -21,7 +20,6 @@ import { FilmsSieteComponent } from './films-siete/films-siete.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PeliculaComponent,
     FilmsCeroComponent,
     HomeComponent,
     FilmsUnoComponent,
