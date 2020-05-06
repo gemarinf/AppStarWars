@@ -17,3 +17,7 @@
 .table-dark thead th{
     color: #f3d30c;
 }
+
+.img-thumbnail{
+    height: 485px;
+}
