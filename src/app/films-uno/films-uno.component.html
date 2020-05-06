@@ -49,7 +49,7 @@
                 </button>
               </h5>
             </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
               <div class="card-body">
                 {{film.director}}
               </div>
@@ -64,9 +64,10 @@
                 </button>
               </h5>
             </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div id="collapseThree" class="collapse show" aria-labelledby="headingThree"
+              data-parent="#accordionExample">
               <div class="card-body">
-                <h4 class="">{{film.release_date}}</h4>
+                {{film.release_date}}
               </div>
             </div>
           </div>
@@ -105,7 +106,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor = "let vehicle of vehicles ; let indexV = index">
+                    <tr *ngFor="let vehicle of vehicles ; let indexV = index">
                       <th scope="row">{{indexV + 1}}</th>
                       <td>{{vehicle.name}}</td>
                       <td>{{vehicle.model}}</td>
@@ -113,7 +114,7 @@
                       <td>{{vehicle.manufacturer}}</td>
                       <td>{{vehicle.max_atmosphering_speed}}</td>
                     </tr>
-                   
+
                   </tbody>
                 </table>
               </div>
@@ -154,7 +155,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor = "let Character of characters ; let indexV = index">
+                    <tr *ngFor="let Character of characters ; let indexV = index">
                       <th scope="row">{{indexV + 1}}</th>
                       <td>{{Character.name}}</td>
                       <td>{{Character.height}}</td>
@@ -163,7 +164,7 @@
                       <td>{{Character.hair_color}}</td>
                       <td>{{Character.eye_color}}</td>
                     </tr>
-                   
+
                   </tbody>
                 </table>
               </div>
@@ -203,7 +204,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor = "let planet of planets ; let indexV = index">
+                    <tr *ngFor="let planet of planets ; let indexV = index">
                       <th scope="row">{{indexV + 1}}</th>
                       <td>{{planet.name}}</td>
                       <td>{{planet.climate}}</td>
@@ -211,7 +212,7 @@
                       <td>{{planet.terrain}}</td>
                       <td>{{planet.population}}</td>
                     </tr>
-                   
+
                   </tbody>
                 </table>
               </div>
@@ -252,7 +253,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor = "let starship of starships ; let indexV = index">
+                    <tr *ngFor="let starship of starships ; let indexV = index">
                       <th scope="row">{{indexV + 1}}</th>
                       <td>{{starship.name}}</td>
                       <td>{{starship.model}}</td>
@@ -261,7 +262,7 @@
                       <td>{{starship.max_atmosphering_speed}}</td>
                       <td>{{starship.hyperdrive_rating}}</td>
                     </tr>
-                   
+
                   </tbody>
                 </table>
               </div>
@@ -302,7 +303,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor = "let specie of species ; let indexV = index">
+                    <tr *ngFor="let specie of species ; let indexV = index">
                       <th scope="row">{{indexV + 1}}</th>
                       <td>{{specie.name}}</td>
                       <td>{{specie.average_height}}</td>
@@ -311,7 +312,7 @@
                       <td>{{specie.eye_colors}}</td>
                       <td>{{specie.language}}</td>
                     </tr>
-                   
+
                   </tbody>
                 </table>
               </div>

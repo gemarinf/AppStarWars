@@ -1,26 +1,30 @@
-<div  class="container-fluid">
+<div class="container-fluid pt-3">
     <div class="row">
         <div class="col">
             <div *ngIf="newhope">
-            <img [routerLink]="['/a-new-hope']" src="./assets/images/a-new-hope.jpg" class="col-sm-12 pl-sm-0 pr-sm-0 ">
-            <div  class="col-sm-12 text-center">{{films.results[0].title}}</div>
+                <img [routerLink]="['/a-new-hope']" src="./assets/images/a-new-hope.jpg"
+                    class="col-sm-12 pl-sm-0 pr-sm-0 ">
+                <div class="col-sm-12 text-center">{{films.results[0].title}}</div>
             </div>
         </div>
         <div style="padding-top: 20px;" class="col">
-            <input (keyup)="searchByYear(value.value);" class="form-control" id="value" name="value" type="text" placeholder="Buscar pelicula nombre o por año" #value/>
+            <input (keyup)="searchByYear(value.value);" class="form-control" id="value" name="value" type="text"
+                placeholder="Buscar pelicula nombre o por año" #value />
         </div>
         <div class="col">
             <div *ngIf="jedi">
-            <img [routerLink]="['/return-of-the-jedi']" src="./assets/images/return-of-the-jedi.jpg" class="col-sm-12 pl-sm-0 pr-sm-0 ">
-            <div class="col-sm-12 text-center">{{films.results[2].title}}</div>
+                <img [routerLink]="['/return-of-the-jedi']" src="./assets/images/return-of-the-jedi.jpg"
+                    class="col-sm-12 pl-sm-0 pr-sm-0 ">
+                <div class="col-sm-12 text-center">{{films.results[2].title}}</div>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col">
             <div *ngIf="attack">
-            <img [routerLink]="['/attack-of-the-clones']" src="./assets/images/attack-of-the-clones.jpg" class="col-sm-12 pl-sm-0 pr-sm-0">
-            <div class="col-sm-12 text-center">{{films.results[4].title}}</div>
+                <img [routerLink]="['/attack-of-the-clones']" src="./assets/images/attack-of-the-clones.jpg"
+                    class="col-sm-12 pl-sm-0 pr-sm-0">
+                <div class="col-sm-12 text-center">{{films.results[4].title}}</div>
             </div>
         </div>
         <div class="col">
@@ -28,30 +32,33 @@
         </div>
         <div class="col">
             <div *ngIf="empire">
-            <img [routerLink]="['/empire-strikers']" src="./assets/images/the-empires-strikes-back.jpg" class="col-sm-12 pl-sm-0 pr-sm-0">
-            <div class="col-sm-12 text-center">{{films.results[1].title}}</div>
+                <img [routerLink]="['/empire-strikers']" src="./assets/images/the-empires-strikes-back.jpg"
+                    class="col-sm-12 pl-sm-0 pr-sm-0">
+                <div class="col-sm-12 text-center">{{films.results[1].title}}</div>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col">
             <div *ngIf="phantom">
-            <img [routerLink]="['/the-phantonm-amenace']"  src="./assets/images/the-phantonm-amenace.jpg" class="col-sm-12 pl-sm-0 pr-sm-0">
-            <div class="col-sm-12 text-center">{{films.results[3].title}}</div>
+                <img [routerLink]="['/the-phantonm-amenace']" src="./assets/images/the-phantonm-amenace.jpg"
+                    class="col-sm-12 pl-sm-0 pr-sm-0">
+                <div class="col-sm-12 text-center">{{films.results[3].title}}</div>
             </div>
         </div>
         <div class="col">
             <div *ngIf="revenge">
-            <img [routerLink]="['/revance-of-the-sith']"  src="./assets/images/revance-of-the-sith.jpg" class="col-sm-12 pl-sm-0 pr-sm-0">
-            <div class="col-sm-12 text-center">{{films.results[5].title}}</div>
+                <img [routerLink]="['/revance-of-the-sith']" src="./assets/images/revance-of-the-sith.jpg"
+                    class="col-sm-12 pl-sm-0 pr-sm-0">
+                <div class="col-sm-12 text-center">{{films.results[5].title}}</div>
             </div>
         </div>
-        <div class="col" >
+        <div class="col">
             <div *ngIf="force">
-            <img [routerLink]="['/the-force-awakens']" src="./assets/images/the-force-awakens.jpg" class="col-sm-12 pl-sm-0 pr-sm-0">
-            <div class="col-sm-12 text-center">{{films.results[6].title}}</div>
+                <img [routerLink]="['/the-force-awakens']" src="./assets/images/the-force-awakens.jpg"
+                    class="col-sm-12 pl-sm-0 pr-sm-0">
+                <div class="col-sm-12 text-center">{{films.results[6].title}}</div>
             </div>
         </div>
     </div>
 </div>
-

@@ -1,0 +1,19 @@
+.card-header{
+    background-color: #f3d30c;
+}
+.btn-link{
+   color: #5d5c59;
+}
+
+.card{
+    background-color: rgb(255, 255, 255,.5);
+}
+
+.card-body{
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.table-dark thead th{
+    color: #f3d30c;
+}
